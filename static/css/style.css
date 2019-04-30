@@ -1,0 +1,167 @@
+html,
+body {
+  height: 100%;
+  font-size: 15px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  /* Photo by Dmitry Moraine on Unsplash */
+  /* Photo by André François McKenzie on Unsplash */
+  background-color: rgba(221, 221, 109, 0.9);
+  color: rgb(94, 94, 46);
+}
+
+h2 {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+}
+
+/* NAVBAR */
+.navbar-brand {
+  font-family: 'Open Sans', sans-serif;
+  padding-right: 15px;
+}
+
+#main-nav {
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+#main-nav li a {
+  border-bottom: 1px solid transparent;
+}
+
+#main-nav li a:hover {
+  border-bottom: 1px solid rgba(235, 208, 103, 0.3);
+  transition: 0.5s;
+}
+
+
+/* BUTTONS */
+.btn-lg,
+.btn-success-outline {
+  color: rgba(94, 94, 46);
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid  rgba(94, 94, 46, 0.9);
+  font-family: 'Open Sans', sans-serif;
+  transition: 0.5s;
+}
+
+.btn-lg:hover,
+.btn-lg:focus,
+.btn-lg:active,
+.btn-success-outline:hover,
+.btn-success-outline:focus,
+.btn-success-outline:active {
+  background-color: rgba(158, 158, 77, 0.9);
+  border: 1px solid  rgba(94, 94, 46, 0.9);
+  transition: 0.5s;
+}
+
+.btn-primary {
+  background-color: rgba(158, 158, 77, 0.9);
+  border: 1px solid  rgba(94, 94, 46, 0.9);
+  transition: 0.5s;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  border: 1px solid  rgba(94, 94, 46, 0.9);
+  background-color: rgb(94, 94, 46);
+}
+
+.fa-arrow-alt-circle-down {
+  text-align: center;
+  font-size: 2.5rem;
+  color: white;
+}
+
+.fa-arrow-alt-circle-down:hover {
+  color:rgba(230, 230, 105, 0.8);
+  transition: 0.3s;
+}
+
+/* HORIZONTAL LINES */
+.brown-hr {
+  border-top: 1px solid rgba(158, 158, 77, 0.9);
+  width: 150px;
+  background-color: rgba(94, 94, 46, 0.9);
+}
+
+/* COVER SECTION */
+#cover {
+  padding-top: 30px;
+  padding-bottom: 15px;
+  /* The image used */
+  background-image: url("../img/andre-francois-mckenzie-557624-unsplash.jpg");
+  /* Background color in case the image does not work or load */
+  background-color: rgba(196, 196, 96, 0.98);
+
+  /* Center and scale the image */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.wall-sticker {
+  background-color: rgba(94, 94, 46, 0.9);
+  padding: 14rem 20rem 16rem 3rem;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 4rem;
+  color: white;
+}
+
+.moto {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2rem;
+  padding: 12.6rem 10rem ;
+  text-align: center;
+  background-color: rgba(94, 94, 46, 0.7);
+  color: white;
+}
+
+/* DATA TABLE SECTION */
+
+#data-table {
+  padding-top: 30px;
+  padding-bottom: 15px;
+  background-color: rgba(221, 221, 109, 0.9);
+  color: rgb(94, 94, 46);
+}
+
+
+/* QUERY SECTION */
+
+#query {
+  padding: 30px 0;
+  background-image: url("../img/dmitry-moraine-1379000-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-color: rgba(221, 221, 109, 0.9);
+  background-position: center;
+  background-size: cover;
+}
+
+#query .col-sm-6 {
+  padding: 30px 40px 15px;
+  background-color: rgba(94, 94, 46, 0.9);
+  color: white;
+}
+
+/* GRAPHS SECTION */
+
+#graphs {
+  padding-top: 30px;
+  padding-bottom: 15px;
+  background-color: rgba(221, 221, 109, 0.9);
+  text-align: center;
+}
+
+/* FOOTER */
+
+#footer {
+  padding-top: 20px;  
+  padding-bottom: 5px;
+  background-color: rgba(94, 94, 46, 0.9);
+  color: white;
+  text-align: center;
+}
