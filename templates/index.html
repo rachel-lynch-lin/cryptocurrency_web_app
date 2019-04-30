@@ -6,19 +6,27 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+  <!-- Favicon -->
+  <!-- Photo by Thought Catalog on Unsplash -->
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+ 
   <!-- CDN version of Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:400,600" rel="stylesheet">
   <!-- Custom CSS -->
-  <link rel="stylesheet" type="text/css" media="screen" href="/static/style.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="/static/css/style.css">
 
 </head>
 <body>
     
   <section id="navigation">
     <div class="container-fluid sticky-top">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Navbar</a>
+      <nav class="navbar navbar-expand-lg navbar-light" id="main-nav">
+        <a class="navbar-brand" href="#"><i class="fas fa-coins"></i>  Cryptocurrency Web App</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -26,18 +34,24 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="#cover">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="#data-table">Data Table</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#query">Searches</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#graphs">Graphs</a>
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <button class="btn btn-primary btn-lg" type="submit">Search</button>
           </form>
         </div>
       </nav>
@@ -57,15 +71,123 @@
   </div>
   {% endif %}
 
-  <div class="container">
-    <div class="jumbotron">
-      <h1 class="display-4">Hello, world!</h1>
-      <p class="lead">Cryptocurrency Web App!</p>
-      <hr class="my-4">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, possimus!</p>
-      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+  <section id="cover">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <p class="lead wall-sticker">
+            Hello <br>
+            World! <br>
+          </p>
+        </div>
+        <div class="col-sm-8">
+          <h1 class="moto">
+            View cryptocurrrency market data in tables,<br>
+            search for specific information, <br>
+            and see the results in graphs! <br>
+            <br>
+            <a href="#query"><i class="far fa-arrow-alt-circle-down"></i></a>
+          </h1>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
+
+  <section id="data-table">
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="col-sm-6">
+          <h2>Data Table</h2>
+          <div class="row">
+            {% for data in globalcd %}
+              <div class="col-sm-2">
+                <p>{{data}}</p>
+              </div>
+            {% else %}
+              <p>No data found!</p>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="query">
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="col-sm-6">
+          <h2>Search for Something!</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex illum sit explicabo? Dolor vel culpa placeat vero atque, nobis hic dolores est, nesciunt quibusdam velit amet aperiam id voluptas quis recusandae assumenda nihil fugit! Maxime ea a illo mollitia possimus eos perferendis? Consequuntur et harum similique nisi corporis illum accusantium!</p>
+
+          <form>
+            <div class="form-group">
+              <label for="formControlRange">Example Range input</label>
+              <input type="range" class="form-control-range" id="formControlRange">
+            </div>
+            <button class="btn btn-primary" type="submit">Search</button>
+          </form>
+        
+          <form>
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Email address</label>
+              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlSelect1">Example select</label>
+              <select class="form-control" id="exampleFormControlSelect1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlSelect2">Example multiple select</label>
+              <select multiple class="form-control" id="exampleFormControlSelect2">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Example textarea</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">Search</button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="graphs">
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="col-sm-6">
+          <h2>Check out these Graphs!</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus ea quas sunt possimus minus illum dolorem sed aliquam obcaecati reprehenderit.</p>
+          <img src="/static/img/450.png" alt="Placeholder for future graph">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="footer">
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="col-sm-6">
+          <p>Copyright &copy; Rachel Lin</p>
+        </div>
+        <div class="col-sm-6">
+          <p>API Credits go here</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
   <!-- CDN version of jQuery -->
