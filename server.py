@@ -1,3 +1,5 @@
+#!/usr/bin/env python3.6
+
 from os import environ
 
 # Import requirements
@@ -42,4 +44,4 @@ if __name__ == "__main__":
 
     # Use the DebugToolbar
 
-    app.run(host="0.0.0.0")
+    app.run(port=5000, host="0.0.0.0")
